@@ -1,0 +1,214 @@
+//
+// Grid system
+// --------------------------------------------------
+
+body {
+  margin:0;
+}
+
+// Set the container width, and override it for fixed navbars in media queries
+.@{container-class} {
+  .container-fixed();
+  max-width: @container-desktop;
+  padding-left:  (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+}
+
+// Mobile-first defaults
+.@{row-class} {
+  .make-row();
+  max-width: none;
+}
+
+// Common styles for small and large grid columns
+.columns,
+.@{column-class}-1,
+.@{column-class}-2,
+.@{column-class}-3,
+.@{column-class}-4,
+.@{column-class}-5,
+.@{column-class}-6,
+.@{column-class}-7,
+.@{column-class}-8,
+.@{column-class}-9,
+.@{column-class}-10,
+.@{column-class}-11,
+.@{column-class}-12,
+.@{column-small-class}-1,
+.@{column-small-class}-2,
+.@{column-small-class}-3,
+.@{column-small-class}-4,
+.@{column-small-class}-5,
+.@{column-small-class}-6,
+.@{column-small-class}-7,
+.@{column-small-class}-8,
+.@{column-small-class}-9,
+.@{column-small-class}-10,
+.@{column-small-class}-11,
+.@{column-small-class}-12,
+.@{column-large-class}-1,
+.@{column-large-class}-2,
+.@{column-large-class}-3,
+.@{column-large-class}-4,
+.@{column-large-class}-5,
+.@{column-large-class}-6,
+.@{column-large-class}-7,
+.@{column-large-class}-8,
+.@{column-large-class}-9,
+.@{column-large-class}-10,
+.@{column-large-class}-11,
+.@{column-large-class}-12 {
+
+  float:left;
+  position: relative;
+// Prevent columns from collapsing when empty
+  min-height: 1px;
+// Inner gutter via padding
+  padding-left:  (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+
+  box-sizing: border-box;
+}
+
+.show-for-small,
+.show-for-medium,
+.show-for-large
+{ display: none; }
+
+
+//
+// Regular size
+// --------------------------------------------------
+.columns,
+
+.@{column-class}-1  { width: percentage((1 / @grid-columns)); }
+.@{column-class}-2  { width: percentage((2 / @grid-columns)); }
+.@{column-class}-3  { width: percentage((3 / @grid-columns)); }
+.@{column-class}-4  { width: percentage((4 / @grid-columns)); }
+.@{column-class}-5  { width: percentage((5 / @grid-columns)); }
+.@{column-class}-6  { width: percentage((6 / @grid-columns)); }
+.@{column-class}-7  { width: percentage((7 / @grid-columns)); }
+.@{column-class}-8  { width: percentage((8 / @grid-columns)); }
+.@{column-class}-9  { width: percentage((9 / @grid-columns)); }
+.@{column-class}-10 { width: percentage((10/ @grid-columns)); }
+.@{column-class}-11 { width: percentage((11/ @grid-columns)); }
+.@{column-class}-12 { width: 100%; }
+
+
+// Push and pull columns for source order changes
+.@{column-class}-push-1  { left: percentage((1 / @grid-columns)); }
+.@{column-class}-push-2  { left: percentage((2 / @grid-columns)); }
+.@{column-class}-push-3  { left: percentage((3 / @grid-columns)); }
+.@{column-class}-push-4  { left: percentage((4 / @grid-columns)); }
+.@{column-class}-push-5  { left: percentage((5 / @grid-columns)); }
+.@{column-class}-push-6  { left: percentage((6 / @grid-columns)); }
+.@{column-class}-push-7  { left: percentage((7 / @grid-columns)); }
+.@{column-class}-push-8  { left: percentage((8 / @grid-columns)); }
+.@{column-class}-push-9  { left: percentage((9 / @grid-columns)); }
+.@{column-class}-push-10 { left: percentage((10/ @grid-columns)); }
+.@{column-class}-push-11 { left: percentage((11/ @grid-columns)); }
+
+.@{column-class}-pull-1  { right: percentage((1 / @grid-columns)); }
+.@{column-class}-pull-2  { right: percentage((2 / @grid-columns)); }
+.@{column-class}-pull-3  { right: percentage((3 / @grid-columns)); }
+.@{column-class}-pull-4  { right: percentage((4 / @grid-columns)); }
+.@{column-class}-pull-5  { right: percentage((5 / @grid-columns)); }
+.@{column-class}-pull-6  { right: percentage((6 / @grid-columns)); }
+.@{column-class}-pull-7  { right: percentage((7 / @grid-columns)); }
+.@{column-class}-pull-8  { right: percentage((8 / @grid-columns)); }
+.@{column-class}-pull-9  { right: percentage((9 / @grid-columns)); }
+.@{column-class}-pull-10 { right: percentage((10/ @grid-columns)); }
+.@{column-class}-pull-11 { right: percentage((11/ @grid-columns)); }
+
+
+//
+// Large sized screens
+// --------------------------------------------------
+@media (min-width: @screen-large) {
+  .@{container-class} {
+    max-width: @screen-large-desktop;
+  }
+
+  .show-for-large { display: block; }
+  .hide-for-large { display: none; }
+
+  .@{column-large-class}-1  { width: percentage((1 / @grid-columns)); }
+  .@{column-large-class}-2  { width: percentage((2 / @grid-columns)); }
+  .@{column-large-class}-3  { width: percentage((3 / @grid-columns)); }
+  .@{column-large-class}-4  { width: percentage((4 / @grid-columns)); }
+  .@{column-large-class}-5  { width: percentage((5 / @grid-columns)); }
+  .@{column-large-class}-6  { width: percentage((6 / @grid-columns)); }
+  .@{column-large-class}-7  { width: percentage((7 / @grid-columns)); }
+  .@{column-large-class}-8  { width: percentage((8 / @grid-columns)); }
+  .@{column-large-class}-9  { width: percentage((9 / @grid-columns)); }
+  .@{column-large-class}-10 { width: percentage((10/ @grid-columns)); }
+  .@{column-large-class}-11 { width: percentage((11/ @grid-columns)); }
+  .@{column-large-class}-12 { width: 100%; }
+
+}
+
+//
+// Medium sized screens
+// --------------------------------------------------
+@media (max-width: @screen-tablet) {
+  .@{container-class} {
+    max-width: @container-tablet;
+  }
+
+  .show-for-medium { display: block; }
+  .hide-for-medium { display: none; }
+
+  .@{column-medium-class}-1  { width: percentage((1 / @grid-columns)); }
+  .@{column-medium-class}-2  { width: percentage((2 / @grid-columns)); }
+  .@{column-medium-class}-3  { width: percentage((3 / @grid-columns)); }
+  .@{column-medium-class}-4  { width: percentage((4 / @grid-columns)); }
+  .@{column-medium-class}-5  { width: percentage((5 / @grid-columns)); }
+  .@{column-medium-class}-6  { width: percentage((6 / @grid-columns)); }
+  .@{column-medium-class}-7  { width: percentage((7 / @grid-columns)); }
+  .@{column-medium-class}-8  { width: percentage((8 / @grid-columns)); }
+  .@{column-medium-class}-9  { width: percentage((9 / @grid-columns)); }
+  .@{column-medium-class}-10 { width: percentage((10/ @grid-columns)); }
+  .@{column-medium-class}-11 { width: percentage((11/ @grid-columns)); }
+  .@{column-medium-class}-12 { width: 100%; }
+
+}
+
+//
+// Small screens
+// --------------------------------------------------
+@media (max-width: @screen-phone) {
+  .@{container-class} {
+    max-width: @container-tablet;
+  }
+
+  .show-for-small { display: block; }
+  .hide-for-small { display: none; }
+
+  .@{column-class}-1,
+  .@{column-class}-2,
+  .@{column-class}-3,
+  .@{column-class}-4,
+  .@{column-class}-5,
+  .@{column-class}-6,
+  .@{column-class}-7,
+  .@{column-class}-8,
+  .@{column-class}-9,
+  .@{column-class}-10,
+  .@{column-class}-11,
+  .@{column-class}-12 { width: 100%; }
+
+
+.@{column-small-class}-1  { width: percentage((1 / @grid-columns)); }
+  .@{column-small-class}-2  { width: percentage((2 / @grid-columns)); }
+  .@{column-small-class}-3  { width: percentage((3 / @grid-columns)); }
+  .@{column-small-class}-4  { width: percentage((4 / @grid-columns)); }
+  .@{column-small-class}-5  { width: percentage((5 / @grid-columns)); }
+  .@{column-small-class}-6  { width: percentage((6 / @grid-columns)); }
+  .@{column-small-class}-7  { width: percentage((7 / @grid-columns)); }
+  .@{column-small-class}-8  { width: percentage((8 / @grid-columns)); }
+  .@{column-small-class}-9  { width: percentage((9 / @grid-columns)); }
+  .@{column-small-class}-10 { width: percentage((10/ @grid-columns)); }
+  .@{column-small-class}-11 { width: percentage((11/ @grid-columns)); }
+  .@{column-small-class}-12 { width: 100%; }
+
+}

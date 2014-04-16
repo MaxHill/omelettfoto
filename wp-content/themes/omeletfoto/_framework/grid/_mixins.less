@@ -1,0 +1,103 @@
+//
+// Mixins
+// --------------------------------------------------
+
+
+// Utilities
+// -------------------------
+
+// Clearfix
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Grid System
+// -----------
+
+// Centered container element
+.container-fixed() {
+  margin-right: auto;
+  margin-left: auto;
+  .clearfix();
+}
+
+// Creates a wrapper for a series of columns
+.make-row() {
+  // Then clear the floated columns
+  .clearfix();
+
+  margin-left:  (@grid-gutter-width / -2);
+  margin-right: (@grid-gutter-width / -2);
+
+  // Negative margin nested rows out to align the content of columns
+  .row {
+    margin-left:  (@grid-gutter-width / -2);
+    margin-right: (@grid-gutter-width / -2);
+  }
+}
+
+// Generate the columns
+.make-column(@columns) {
+  position: relative;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+
+  // Calculate width based on number of columns available
+  @media (min-width: @grid-float-breakpoint) {
+    float: left;
+    width: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the column offsets
+.make-column-offset(@columns) {
+  @media (min-width: @grid-float-breakpoint) {
+    margin-left: percentage((@columns / @grid-columns));
+  }
+}
+.make-column-push(@columns) {
+  @media (min-width: @grid-float-breakpoint) {
+    left: percentage((@columns / @grid-columns));
+  }
+}
+.make-column-pull(@columns) {
+  @media (min-width: @grid-float-breakpoint) {
+    right: percentage((@columns / @grid-columns));
+  }
+}
+
+// Generate the small columns
+.make-small-column(@columns) {
+  position: relative;
+  float: left;
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Inner gutter via padding
+  padding-left:  (@grid-gutter-width / 2);
+  padding-right: (@grid-gutter-width / 2);
+  @max-width: (@grid-float-breakpoint - 1);
+
+  // Calculate width based on number of columns available
+  @media (max-width: @max-width) {
+    width: percentage((@columns / @grid-columns));
+  }
+}

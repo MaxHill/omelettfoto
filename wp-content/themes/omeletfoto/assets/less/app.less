@@ -1,0 +1,224 @@
+/* -----------------------------------------
+   Imports / Fonts
+----------------------------------------- */
+@import '../../_framework/grid/_config.less';
+@import '../fonts/fonts.css';
+@import '/fancybox.less';
+@import '/animations.less';
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+
+
+/* -----------------------------------------
+   General
+----------------------------------------- */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+  }
+/* -----------------------------------------
+   Branding / Colors / Fonts
+----------------------------------------- */
+@text-color: #000;
+@headings-color: #000;
+@link-color: #000;
+@base-font-stack: 'Open sans', Helvetica, Arial, sans-serif;
+@headings-font-stack: 'chaletmedium';
+@white:#fff;
+@company-color: #00B7F6;
+
+  #logo {
+    font-size: 20px;
+  }
+
+/* -----------------------------------------
+   Typography
+----------------------------------------- */
+  body {
+    font-family: @base-font-stack;
+  }
+  //  Headers
+  h1,h2,h3,h4,h5,h5 {
+    font-family: @headings-font-stack;
+    font-weight: 300;
+    color: @headings-color;
+    margin:0px 0px 20px 0px;
+    a {
+      color: @headings-color;
+      &:hover { text-decoration: none }
+    }
+  }
+
+  //  Text
+  p {
+    line-height: 1.4;
+  }
+
+  //  Links
+  a {
+    color: @link-color;
+    &:hover { color:darken(@link-color,10%);}
+  }
+
+/* -----------------------------------------
+   Navigation
+----------------------------------------- */
+#navigation {
+  background: @white;
+  height: 65px;
+  width: 100%;
+  float:left;
+  position: fixed;
+  z-index: 200;
+}
+
+#logo{
+  line-height: 65px;
+  text-decoration: none;
+  font-family: @headings-font-stack;
+  font-size: 34px; // 34pt
+  color:@company-color;
+}
+
+
+  ul.nav {
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+    float:right;
+    li {
+      display: inline-block;
+      float:left;
+      padding:0px 5px;
+      a {
+        color:#252525;
+        font-size: 17px;
+        text-decoration: none;
+        display: block;
+        padding:10px 10px;
+        line-height: 60px;
+        font-family: @headings-font-stack;
+      }
+    }
+  }
+
+
+
+  /* -----------------------------------------
+   content
+----------------------------------------- */
+
+//padding top för att flytta ner vontent under menyn
+#main{
+  padding-top: 65px;
+}
+
+
+  /* -----------------------------------------
+   front- page
+----------------------------------------- */
+
+.image-grid-item {
+  width:25%;
+  float:left;
+  height:auto;
+  position: relative;
+  margin: 0 auto;
+  display:block;
+  -webkit-animation: fadeIn 4s; /* Chrome, Safari, Opera */
+  animation: fadeIn 4s; /* Chrome, Safari, Opera */
+}
+
+.overlay-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(18,184,243,.6);
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.overlay-image:hover {
+  opacity:1;
+}
+
+.overlay-image:hover .center {
+  -webkit-transform:scale(1);
+}
+
+//för att alltid centrera bilden
+.overlay-image:before {
+  content: '';
+    display: inline-block;
+    height: 100%; 
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.center{
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform:scale(.5);
+
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.overlay-image .center p {
+  color:white;
+  text-transform: none;
+  display: block;
+  font-family: @headings-font-stack;
+  font-size: 24px;
+
+}
+
+.overlay-image .center img {
+  display: inline-block;
+  width: 48px;
+}
+
+.image-grid-item img {
+  position: relative; 
+  display: block;
+   width: 100%; /* for IE 6 */
+}
+
+
+.pagination{
+  display: block;
+  width:100%;
+  float:left;
+  text-align: center;
+  margin-top: 30px;
+}
+.pagination a{
+  text-decoration: none;
+  font-size: 25px;
+  font-family: @headings-font-stack;
+}
+.pagination a:hover{
+  color:@company-color;
+}
