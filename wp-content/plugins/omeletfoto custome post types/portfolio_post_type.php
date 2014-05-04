@@ -34,7 +34,7 @@ function create_image_item() {
  
             'public' => true,
             'menu_position' => 15,
-            'supports' => array( 'title', 'thumbnail' ),
+            'supports' => array( 'title'),
             'taxonomies' => array( '' ),
             'menu_icon' => plugins_url( 'images/image.png', __FILE__ ),
             'has_archive' => true
@@ -42,21 +42,31 @@ function create_image_item() {
     );
 }
 
-function create_my_taxonomies() {
-    register_taxonomy(
-        'image_category',
-        'image_item',
-        array(
-            'labels' => array(
-                'name' => 'Bild kategori',
-                'add_new_item' => 'Lägg till ny bild kategori',
-                'new_item_name' => "Ny bild kategori"
-            ),
-            'show_ui' => true,
-            'show_tagcloud' => false,
-            'hierarchical' => true
-        )
-    );
-}
 
-add_action( 'init', 'create_my_taxonomies', 0 );
+
+function add_custom_taxonomies() {
+    // Add new "Locations" taxonomy to image_item
+    register_taxonomy('image_category', 'image_item', array(
+        // Hierarchical taxonomy (like categories)
+        'hierarchical' => true,
+        // This array of options controls the labels displayed in the WordPress Admin UI
+        'labels' => array(
+            'name' => _x( 'Bild Kategorier', 'taxonomy general name' ),
+            'singular_name' => _x( 'Bild Kategorier', 'taxonomy singular name' ),
+            'search_items' =>  __( 'Sök Bild Kategorier' ),
+            'all_items' => __( 'Alla Bild Kategorier' ),
+            'edit_item' => __( 'Redigera kategori' ),
+            'update_item' => __( 'Uppdatera kategori' ),
+            'add_new_item' => __( 'Lägg till ny kategori' ),
+            'new_item_name' => __( 'Ny kategori namn' ),
+            'menu_name' => __( 'Bild Kategorier' ),
+        ),
+        // Control the slugs used for this taxonomy
+        'rewrite' => array(
+            'slug' => 'image_category', // This controls the base slug that will display before each term
+            'with_front' => false, // Don't display the category base before "/locations/"
+            'hierarchical' => true // This will allow URL's like "/locations/boston/cambridge/"
+        ),
+    ));
+}
+add_action( 'init', 'add_custom_taxonomies', 0 );

@@ -17,7 +17,7 @@ if ( get_query_var('paged') ) {
         $temp = $wp_query; 
         $wp_query = null; 
         $wp_query = new WP_Query(); 
-        $wp_query->query('showposts=10&post_type=image_item'.'&paged='.$paged); 
+        $wp_query->query('showposts=12&post_type=image_item'.'&paged='.$paged); 
 
         while ($wp_query->have_posts()) : $wp_query->the_post(); 
         $product_terms = wp_get_object_terms($post->ID, 'product');
@@ -34,23 +34,23 @@ while ( $loop->have_posts() ) : $loop->the_post();
 endwhile;
  ?>
 
-        <div class="image-grid-item">
+        <a class="image-grid-item" href="<?php the_field('bilden'); ?>" rel="fancyboxgallery">
             <img src="<?php the_field('bilden'); ?>" alt="<?php the_title() ?>">
 
-            <a class="fancybox overlay-image" href="<?php the_field('bilden'); ?>">
+            <div class="fancybox overlay-image" >
                 <div class="center">
                     <p> <?php the_title() ?>  </p>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/glaszoom.png" alt="zoom">
                 </div>
-            </a>                   
-        </div>
+                </div>
+                </a>
     <?php endwhile; ?>
 
 
 
 
 </div> 
-    <nav class="pagination">
+    <nav class="imagePagination">
         <?php previous_posts_link('Newer') ?>
         <?php next_posts_link('Older') ?>
     </nav>    
@@ -59,5 +59,6 @@ endwhile;
         $wp_query = $temp;  // Reset
     ?>
 </section>  
+
 
 <?php get_footer(); ?>

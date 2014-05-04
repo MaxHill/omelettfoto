@@ -152,12 +152,14 @@ a.fancybox-nav span {
 
 a.fancybox-prev span {
     left: 0;
-    background-position: 0 -50px;
+    background-image: url("../images/arrowleft.png") !important;
+    background-position: 0 center;
 }
 
 a.fancybox-next span {
     right: 0;
-    background-position: 0 -100px;
+    background-image: url("../images/arrowright.png") !important;
+    background-position: 0 center;
 }
 
 .fancybox-mobile  a.fancybox-nav {
@@ -381,4 +383,123 @@ a.fancybox-expand {
     background: -o-radial-gradient(center, ellipse cover,  #999999 0%,#555555 100%); /* Opera 12+ */
     background: -ms-radial-gradient(center, ellipse cover,  #999999 0%,#555555 100%); /* IE10+ */
     background: radial-gradient(ellipse at center,  #999999 0%,#555555 100%); /* W3C */
+}
+
+
+/* -----------------------------------------
+   fancybox thumbnailss
+   -----------------------------------------*/
+
+
+#fancybox-thumbs {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 8080;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#fancybox-thumbs.bottom {
+  bottom: 0px;
+}
+
+#fancybox-thumbs.top {
+  top: 0px;
+}
+
+#fancybox-thumbs .outer {
+  padding: 10px 34px 10px 30px;
+}
+
+#fancybox-thumbs .inner {
+  width: 100%;
+  overflow: hidden;
+}
+
+#fancybox-thumbs ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  left : 0;
+  overflow: hidden;
+}
+
+#fancybox-thumbs ul li {
+  float: left;
+  padding: 3px;
+  margin: 0 4px;
+  list-style: none;
+}
+
+#fancybox-thumbs ul li a {
+  display: block;
+  overflow: hidden;
+  outline: none;
+  background: #222;
+  box-shadow: 1px 1px 2px #000;
+  border-radius: 2px;
+  border: 3px solid #fff;
+  zoom: 1;
+}
+
+#fancybox-thumbs ul li img {
+  display: block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+  max-width: none;
+}
+
+#fancybox-thumbs ul li.fancybox-thumb-active {
+  padding: 0;
+}
+
+#fancybox-thumbs ul li.fancybox-thumb-active a {
+  opacity: 1;
+  border-width: 6px;
+  border-color: #fff;
+}
+
+.fancybox-thumb-prev, .fancybox-thumb-next {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  width: 20px;
+  background: #222;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  display: none;
+}
+
+.fancybox-thumb-prev {
+  left: 4px;
+}
+
+.fancybox-thumb-next {
+  right: 4px;
+}
+
+.fancybox-thumb-prev:hover, .fancybox-thumb-next:hover {
+  background: #111;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.fancybox-thumb-prev span, .fancybox-thumb-next span {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 12px;
+  margin-top: -6px;
+  background-repeat: no-repeat;
+}
+
+.fancybox-thumb-prev span {
+  left: 5px;
+  background-image: url("../images/arrowleft.png");
+}
+
+.fancybox-thumb-next span {
+  right: 5px;
+  background-image: url("../images/arrowright.png");
 }
