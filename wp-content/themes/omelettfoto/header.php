@@ -61,7 +61,7 @@ $turl = get_bloginfo("template_url");
     <!-- Navigation -->
     <?php do_action("houston_before_nav"); ?>
     <nav id="navigation">
-            <div class="col-4 medium-col-12">
+            <div class="col-4 medium-width-fix">
                 <a id="logo" class="brand" href="<?php bloginfo("home"); ?>" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
             </div>
             <div class="col-8 medium-width-fix">
@@ -75,6 +75,7 @@ $turl = get_bloginfo("template_url");
                 ) );
                 ?>
         </div>
+        
     </nav>
     <?php do_action("houston_after_nav"); ?>
     <!-- End nav -->

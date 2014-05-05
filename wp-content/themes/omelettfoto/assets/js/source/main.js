@@ -12,7 +12,6 @@
 				nextEffect  : 'fade',
 				prevEffect  : 'fade',
 				showNavArrows: true,
-				theme : 'light',
 				helpers : {
 					thumbs : true
 				}
@@ -27,18 +26,23 @@
         })
 
         var navOpen = false;
-        $('#navigation ul').on('click', function() {
 
+        $('#logo').on('click', function(e) {
+			if($(window).width() < 1023) // om det är tablet
+    		{
+			    e.preventDefault();
+			}
         	if (navOpen) {
-        		console.log();
+        		
         		$('#navigation ul').children('li').removeClass('show').addClass('hide');
         		setTimeout(function() {
         			$('#navigation ul').children('li').removeClass('hide');
         		}, 301);
         		navOpen = false;
         	}else{
+        		console.log("open");
         		navOpen = true;
-        		$(this).children('li').addClass('show');
+        		$("#navigation ul").children('li').addClass('show');
         	}
         });
 
@@ -63,6 +67,7 @@
 				self.container = config.container;
 				self.pagination = $(".imagePagination");
 				self.pageLink = $(".imagePagination .nextpostslink, .imagePagination .previouspostslink");
+				$('.loading').hide();
 
 				console.log(self.url+self.container);
 
@@ -76,11 +81,10 @@
 						self.pageLink.hide();
 					},
 					toggleLoading:function(){
-						if ($('.loading').length < 1) {
-							var loading = "<p class='loading'>Laddar...</p>";
-							self.pagination.append(loading);
+						if ( !$('.loading').is(':visible') ) {
+							$('.loading').show();
 						}else{
-							$('.loading').remove();
+							$('.loading').hide();
 						}
 						
 					},
@@ -114,7 +118,7 @@
 							div.children('.image-grid-item').each(function(index, el) {
 								var element = $(el).addClass('fadeMeIn');
 								$(self.container).append(element).masonry("appended", el);
-								$(self.container).masonry('layout');
+								$(self.container).imagesLoaded().masonry('layout');
 								noMore = false;
 							});
 							if (loop) {
