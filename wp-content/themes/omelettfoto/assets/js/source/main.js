@@ -47,11 +47,13 @@
         });
 
         $('#main').on('click', function() {
-        	$('#navigation ul').children('li').removeClass('show').addClass('hide');
-        	setTimeout(function() {
-        		$('#navigation ul').children('li').removeClass('hide');
-        	}, 301);
-        	navOpen = false;
+        	if (navOpen) {
+	        	$('#navigation ul').children('li').removeClass('show').addClass('hide');
+	        	setTimeout(function() {
+	        		$('#navigation ul').children('li').removeClass('hide');
+	        	}, 301);
+	        	navOpen = false;
+        	}
         });
 
 
@@ -118,7 +120,9 @@
 							div.children('.image-grid-item').each(function(index, el) {
 								var element = $(el).addClass('fadeMeIn');
 								$(self.container).append(element).masonry("appended", el);
-								$(self.container).imagesLoaded().masonry('layout');
+								$(self.container).imagesLoaded(function(){
+									$(self.container).masonry('layout');
+								});
 								noMore = false;
 							});
 							if (loop) {
