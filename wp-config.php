@@ -1,90 +1,107 @@
 <?php
+
+if (strpos($_SERVER['SERVER_NAME'],'localhost') !== false) {
+
+//flera domÃ¤ner
+    define( 'WP_SITEURL','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto' );
+    define( 'WP_HOME','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto' );
+//slut flera domÃ¤ner
+
+
+} else {
+    //flera domÃ¤ner
+    define( 'WP_SITEURL','http://'.$_SERVER['SERVER_NAME'].'' );
+    define( 'WP_HOME','http://'.$_SERVER['SERVER_NAME'].'' );
+    //slut flera domÃ¤ner
+}
+
+
 /**
- * Baskonfiguration för WordPress.
+ * Baskonfiguration fÃ¶r WordPress.
  *
- * Denna fil innehåller följande konfigurationer: Inställningar för MySQL,
- * Tabellprefix, Säkerhetsnycklar, WordPress-språk, och ABSPATH.
- * Mer information på {@link http://codex.wordpress.org/Editing_wp-config.php 
- * Editing wp-config.php}. MySQL-uppgifter får du från ditt webbhotell.
+ * Denna fil innehÃ¥ller fÃ¶ljande konfigurationer: InstÃ¤llningar fÃ¶r MySQL,
+ * Tabellprefix, SÃ¤kerhetsnycklar, WordPress-sprÃ¥k, och ABSPATH.
+ * Mer information pÃ¥ {@link http://codex.wordpress.org/Editing_wp-config.php 
+ * Editing wp-config.php}. MySQL-uppgifter fÃ¥r du frÃ¥n ditt webbhotell.
  *
- * Denna fil används av wp-config.php-genereringsskript under installationen.
- * Du behöver inte använda webbplatsen, du kan kopiera denna fil direkt till
- * "wp-config.php" och fylla i värdena.
+ * Denna fil anvÃ¤nds av wp-config.php-genereringsskript under installationen.
+ * Du behÃ¶ver inte anvÃ¤nda webbplatsen, du kan kopiera denna fil direkt till
+ * "wp-config.php" och fylla i vÃ¤rdena.
  *
  * @package WordPress
  */
 
-// ** MySQL-inställningar - MySQL-uppgifter får du från ditt webbhotell ** //
-/** Namnet på databasen du vill använda för WordPress */
+// ** MySQL-instÃ¤llningar - MySQL-uppgifter fÃ¥r du frÃ¥n ditt webbhotell ** //
+/** Namnet pÃ¥ databasen du vill anvÃ¤nda fÃ¶r WordPress */
 define('DB_NAME', 'raketnu_omelettfoto');
 
-/** MySQL-databasens användarnamn */
+/** MySQL-databasens anvÃ¤ndarnamn */
 define('DB_USER', 'raketnu_omelett');
 
-/** MySQL-databasens lösenord */
+/** MySQL-databasens lÃ¶senord */
 define('DB_PASSWORD', 'raket14');
 
 /** MySQL-server */
 define('DB_HOST', 'raket.nu');
 
-/** Teckenkodning för tabellerna i databasen. */
+/** Teckenkodning fÃ¶r tabellerna i databasen. */
 define('DB_CHARSET', 'utf8');
 
-/** Kollationeringstyp för databasen. Ändra inte om du är osäker. */
+/** Kollationeringstyp fÃ¶r databasen. Ã„ndra inte om du Ã¤r osÃ¤ker. */
 define('DB_COLLATE', '');
 
 /**#@+
  * Unika autentiseringsnycklar och salter.
  *
- * Ändra dessa till unika fraser!
+ * Ã„ndra dessa till unika fraser!
  * Du kan generera nycklar med {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * Du kan när som helst ändra dessa nycklar för att göra aktiva cookies obrukbara, vilket tvingar alla användare att logga in på nytt.
+ * Du kan nÃ¤r som helst Ã¤ndra dessa nycklar fÃ¶r att gÃ¶ra aktiva cookies obrukbara, vilket tvingar alla anvÃ¤ndare att logga in pÃ¥ nytt.
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Ange en unik fras här');
-define('SECURE_AUTH_KEY',  'Ange en unik fras här');
-define('LOGGED_IN_KEY',    'Ange en unik fras här');
-define('NONCE_KEY',        'Ange en unik fras här');
-define('AUTH_SALT',        'Ange en unik fras här');
-define('SECURE_AUTH_SALT', 'Ange en unik fras här');
-define('LOGGED_IN_SALT',   'Ange en unik fras här');
-define('NONCE_SALT',       'Ange en unik fras här');
+define('AUTH_KEY',         'Ange en unik fras hÃ¤r');
+define('SECURE_AUTH_KEY',  'Ange en unik fras hÃ¤r');
+define('LOGGED_IN_KEY',    'Ange en unik fras hÃ¤r');
+define('NONCE_KEY',        'Ange en unik fras hÃ¤r');
+define('AUTH_SALT',        'Ange en unik fras hÃ¤r');
+define('SECURE_AUTH_SALT', 'Ange en unik fras hÃ¤r');
+define('LOGGED_IN_SALT',   'Ange en unik fras hÃ¤r');
+define('NONCE_SALT',       'Ange en unik fras hÃ¤r');
 
 /**#@-*/
 
 /**
- * Tabellprefix för WordPress Databasen.
+ * Tabellprefix fÃ¶r WordPress Databasen.
  *
  * Du kan ha flera installationer i samma databas om du ger varje installation ett unikt
- * prefix. Endast siffror, bokstäver och understreck!
+ * prefix. Endast siffror, bokstÃ¤ver och understreck!
  */
 $table_prefix  = 'wp_';
 
 /**
- * WordPress-språk, förinställt för svenska.
+ * WordPress-sprÃ¥k, fÃ¶rinstÃ¤llt fÃ¶r svenska.
  *
- * Du kan ändra detta för att ändra språk för WordPress.  En motsvarande .mo-fil
- * för det valda språket måste finnas i wp-content/languages. Exempel, lägg till
- * sv_SE.mo i wp-content/languages och ange WPLANG till 'sv_SE' för att få sidan
- * på svenska.
+ * Du kan Ã¤ndra detta fÃ¶r att Ã¤ndra sprÃ¥k fÃ¶r WordPress.  En motsvarande .mo-fil
+ * fÃ¶r det valda sprÃ¥ket mÃ¥ste finnas i wp-content/languages. Exempel, lÃ¤gg till
+ * sv_SE.mo i wp-content/languages och ange WPLANG till 'sv_SE' fÃ¶r att fÃ¥ sidan
+ * pÃ¥ svenska.
  */
 define('WPLANG', 'sv_SE');
 
-/** 
- * För utvecklare: WordPress felsökningsläge. 
- * 
- * Ändra detta till true för att aktivera meddelanden under utveckling. 
- * Det är rekommderat att man som tilläggsskapare och temaskapare använder WP_DEBUG 
- * i sin utvecklingsmiljö. 
- */ 
+/**
+ * FÃ¶r utvecklare: WordPress felsÃ¶kningslÃ¤ge.
+ *
+ * Ã„ndra detta till true fÃ¶r att aktivera meddelanden under utveckling.
+ * Det Ã¤r rekommderat att man som tillÃ¤ggsskapare och temaskapare anvÃ¤nder WP_DEBUG
+ * i sin utvecklingsmiljÃ¶.
+ */
 define('WP_DEBUG', false);
 
-/* Det var allt, sluta redigera här! Blogga på. */
+/* Det var allt, sluta redigera hÃ¤r! Blogga pÃ¥. */
 
-/** Absoluta sökväg till WordPress-katalogen. */
+/** Absoluta sÃ¶kvÃ¤g till WordPress-katalogen. */
 if ( !defined('ABSPATH') )
-	define('ABSPATH', dirname(__FILE__) . '/');
+    define('ABSPATH', dirname(__FILE__) . '/');
 
-/** Anger WordPress-värden och inkluderade filer. */
+/** Anger WordPress-vÃ¤rden och inkluderade filer. */
 require_once(ABSPATH . 'wp-settings.php');
