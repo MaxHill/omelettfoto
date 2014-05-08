@@ -47,11 +47,11 @@ Template Name: About
 	                        <?php endif; ?>
 
 	                        <?php if (get_field('post_nummer')): ?>
-	                        	<li><strong>Tele:</strong><?php the_field('post_nummer'); ?></li>
+	                        	<li><strong>Tele:</strong> <?php the_field('post_nummer'); ?></li>
 	                        <?php endif; ?>
 
 	                        <?php if (get_field('mail')): ?>
-	                        	<li><strong>Mail:</strong><a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></li>
+	                        	<li><strong>Mail:</strong> <a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></li>
 	                        <?php endif; ?>
                         </ul>
                     </article>
