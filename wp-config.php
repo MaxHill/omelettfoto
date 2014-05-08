@@ -1,4 +1,21 @@
 <?php
+
+if (strpos($_SERVER['SERVER_NAME'],'localhost') !== false) {
+
+//flera domäner
+define( 'WP_SITEURL','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto' );
+define( 'WP_HOME','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto' );
+//slut flera domäner
+
+
+} else {
+	//flera domäner
+	define( 'WP_SITEURL','http://'.$_SERVER['SERVER_NAME'].'' );
+	define( 'WP_HOME','http://'.$_SERVER['SERVER_NAME'].'' );
+	//slut flera domäner
+}
+
+
 /**
  * Baskonfiguration för WordPress.
  *
