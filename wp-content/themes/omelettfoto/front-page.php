@@ -71,7 +71,7 @@ endwhile;
  ?>
 
         <a class="image-grid-item" href="<?php the_field('bilden'); ?>" rel="fancyboxgallery">
-            <img src="<?php the_field('bilden'); ?>" alt="<?php the_title() ?>">
+            <img src="<?php echo make_image(get_field('bilden'),720,9999); ?>" alt="<?php the_title() ?>">
 
             <div class="fancybox overlay-image" >
                 <div class="center">
