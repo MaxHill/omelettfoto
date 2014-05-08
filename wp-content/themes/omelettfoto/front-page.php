@@ -51,8 +51,8 @@ endwhile;
 
 </div> 
     <nav class="imagePagination">
-        <?php previous_posts_link('Newer') ?>
-        <?php next_posts_link('Older') ?>
+        <?php previous_posts_link('Nyare') ?>
+        <?php next_posts_link('Äldre') ?>
         <p class='loading'><img src='<?php echo get_stylesheet_directory_uri(); ?>/assets/images/loader1.gif' alt="loading"></p>
     </nav>    
     <?php 
