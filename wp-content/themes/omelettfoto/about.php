@@ -51,7 +51,7 @@ Template Name: About
 	                        <?php endif; ?>
 
 	                        <?php if (get_field('mail')): ?>
-	                        	<li><strong>Mail:</strong><?php the_field('mail'); ?></li>
+	                        	<li><strong>Mail:</strong><a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></li>
 	                        <?php endif; ?>
                         </ul>
                     </article>

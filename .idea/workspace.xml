@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ca93c79-8340-4c1d-94c0-3ca0f3b2d83b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php" afterPath="$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-config.php" afterPath="$PROJECT_DIR$/wp-config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/omelettfoto/about.php" afterPath="$PROJECT_DIR$/wp-content/themes/omelettfoto/about.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="omelettfoto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +29,17 @@
       <file leaf-file-name="page.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/omelettfoto/page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="-7.5" vertical-offset="30" max-vertical-offset="405">
-              <folding>
-                <marker date="1399536185000" expanded="true" signature="197:580" placeholder="..." />
-              </folding>
+            <state line="14" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/omelettfoto/about.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="130" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.6596702" vertical-offset="325" max-vertical-offset="1005">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,10 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wp-config.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="wp-config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="24" selection-start="3162" selection-end="3167" vertical-scroll-proportion="0.66266865" vertical-offset="1013" max-vertical-offset="1680">
+            <state line="97" column="24" selection-start="3162" selection-end="3167" vertical-scroll-proportion="-18.416666" vertical-offset="1013" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
@@ -73,9 +79,9 @@
             <state line="43" column="2" selection-start="1041" selection-end="1041" vertical-scroll-proportion="-11.25" vertical-offset="375" max-vertical-offset="1590">
               <folding>
                 <element signature="e#210#1041#0" expanded="true" />
-                <marker date="1399539858000" expanded="true" signature="1077:1275" placeholder="..." />
-                <marker date="1399539858000" expanded="true" signature="1142:1275" placeholder="..." />
-                <marker date="1399539858000" expanded="true" signature="2301:2336" placeholder="..." />
+                <marker date="1399541142000" expanded="true" signature="1077:1275" placeholder="..." />
+                <marker date="1399541142000" expanded="true" signature="1142:1275" placeholder="..." />
+                <marker date="1399541142000" expanded="true" signature="2301:2336" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -144,6 +150,7 @@
         <option value="$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/omelettfoto/about.php" />
       </list>
     </option>
   </component>
@@ -397,15 +404,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/omelettfoto/page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="-7.5" vertical-offset="30" max-vertical-offset="405">
-          <folding>
-            <marker date="1399536185000" expanded="true" signature="197:580" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="28" selection-start="206" selection-end="206" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
@@ -444,16 +442,30 @@
         <state line="43" column="2" selection-start="1041" selection-end="1041" vertical-scroll-proportion="-11.25" vertical-offset="375" max-vertical-offset="1590">
           <folding>
             <element signature="e#210#1041#0" expanded="true" />
-            <marker date="1399539858000" expanded="true" signature="1077:1275" placeholder="..." />
-            <marker date="1399539858000" expanded="true" signature="1142:1275" placeholder="..." />
-            <marker date="1399539858000" expanded="true" signature="2301:2336" placeholder="..." />
+            <marker date="1399541142000" expanded="true" signature="1077:1275" placeholder="..." />
+            <marker date="1399541142000" expanded="true" signature="1142:1275" placeholder="..." />
+            <marker date="1399541142000" expanded="true" signature="2301:2336" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="24" selection-start="3162" selection-end="3167" vertical-scroll-proportion="0.66266865" vertical-offset="1013" max-vertical-offset="1680">
+        <state line="97" column="24" selection-start="3162" selection-end="3167" vertical-scroll-proportion="-18.416666" vertical-offset="1013" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/omelettfoto/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/omelettfoto/about.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="130" selection-start="2172" selection-end="2172" vertical-scroll-proportion="0.6596702" vertical-offset="325" max-vertical-offset="1005">
           <folding />
         </state>
       </provider>
