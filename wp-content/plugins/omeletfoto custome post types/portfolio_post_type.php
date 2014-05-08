@@ -36,7 +36,7 @@ function create_image_item() {
             'menu_position' => 15,
             'supports' => array( 'title'),
             'taxonomies' => array( '' ),
-            'menu_icon' => plugins_url( 'images/image.png', __FILE__ ),
+            'menu_icon' => 'dashicons-format-image',
             'has_archive' => true
         )
     );

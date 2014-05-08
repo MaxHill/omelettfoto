@@ -9,6 +9,42 @@ if ( get_query_var('paged') ) {
 ?>
 <?php get_header(); ?>
 
+
+
+<?php
+/*
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1
+    );
+    $all_posts = new WP_Query($args);
+
+    $matches = array();
+    while($all_posts->have_posts()): $all_posts->the_post();
+
+        $pattern = 'omelettfoto.se/blogg/wp-content/uploads/';
+        if (strpos($post->post_content,$pattern) !== false) {
+
+
+            $published = strtotime(get_the_date('d M Y'));
+            $month = date("m", $published);
+            $year = date("Y",$published);
+
+            $newUploadPath = "omelettfoto.raket.nu/wp-content/uploads/".$year.'/'.$month.'/';
+            $newContent = str_replace($pattern,$newUploadPath, $post->post_content);
+
+            $post->post_content = $newContent;
+
+            wp_update_post($post);
+
+            //array_push($matches,$newUploadPath);
+        }
+
+    endwhile;
+*/
+
+?>
+
 <section id="main" role="main">
 
 
