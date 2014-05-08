@@ -10,8 +10,6 @@
                             <h1 class="page-title"><?php the_title(); ?></h1>
                         </header>
                         <?php the_content(); ?>
-
-                        <?php endif ?>
                     </article>
                 <?php endwhile; //End the loop ?>
 
