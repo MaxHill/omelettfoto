@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ca93c79-8340-4c1d-94c0-3ca0f3b2d83b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php" afterPath="$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php" afterPath="$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php" />
     </list>
     <ignored path="omelettfoto.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,13 +34,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="front-page.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="front-page.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="33" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.51724136" vertical-offset="750" max-vertical-offset="1590">
+            <state line="73" column="33" selection-start="1864" selection-end="1864" vertical-scroll-proportion="-14.375" vertical-offset="750" max-vertical-offset="1590">
               <folding>
                 <element signature="e#210#1041#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="portfolio_post_type.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="35" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.8095952" vertical-offset="315" max-vertical-offset="1035">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,10 +75,10 @@
         <option value="$PROJECT_DIR$/wp-content/themes/omelettfoto/page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/omelettfoto/_framework/_extras.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php" />
         <option value="$PROJECT_DIR$/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/omelettfoto/about.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php" />
       </list>
     </option>
   </component>
@@ -215,6 +224,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="omeletfoto custome post types" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omelettfoto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omelettfoto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="omeletfoto custome post types" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,13 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="50" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.61764705" vertical-offset="30" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-includes/general-template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1505" column="9" selection-start="51968" selection-end="51968" vertical-scroll-proportion="0.3328336" vertical-offset="22278" max-vertical-offset="36570">
@@ -407,10 +435,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/omelettfoto/front-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="33" selection-start="1864" selection-end="1864" vertical-scroll-proportion="0.51724136" vertical-offset="750" max-vertical-offset="1590">
+        <state line="73" column="33" selection-start="1864" selection-end="1864" vertical-scroll-proportion="-14.375" vertical-offset="750" max-vertical-offset="1590">
           <folding>
             <element signature="e#210#1041#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/omeletfoto custome post types/portfolio_post_type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="35" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.8095952" vertical-offset="315" max-vertical-offset="1035">
+          <folding />
         </state>
       </provider>
     </entry>
