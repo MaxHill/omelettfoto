@@ -47,7 +47,7 @@ Template Name: About
 	                        <?php endif; ?>
 
 	                        <?php if (get_field('post_nummer')): ?>
-	                        	<li><strong>Tele:</strong><?php the_field('post_nummer'); ?></li>
+	                        	<li><strong>Tele:</strong> <?php the_field('post_nummer'); ?></li>
 	                        <?php endif; ?>
 
 	                        <?php if (get_field('mail')): ?>
