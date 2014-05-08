@@ -18,11 +18,11 @@
                 <?php endwhile; //End the loop ?>
             
                 <nav class="pagination">
-                <?php previous_posts_link('Newer') ?>
+                <?php previous_posts_link('Nyare') ?>
                     <?php if($previous = get_previous_posts_link() && $next = get_next_posts_link()) : ?>
                         <div class="separator"></div>
                     <?php endif; ?>
-                    <?php next_posts_link('Older') ?>
+                    <?php next_posts_link('Äldre') ?>
                 </nav> 
             </div>
         </div>
