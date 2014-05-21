@@ -61,10 +61,10 @@ $turl = get_bloginfo("template_url");
     <!-- Navigation -->
     <?php do_action("houston_before_nav"); ?>
     <nav id="navigation">
-            <div class="col-4 medium-width-fix">
+            <div class="col-3 medium-width-fix">
                 <a id="logo" class="brand" href="<?php bloginfo("home"); ?>" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
             </div>
-            <div class="col-8 medium-width-fix">
+            <div class="col-9 medium-width-fix">
                <?php
                $navigation = 'primary_navigation';
                wp_nav_menu( array(
