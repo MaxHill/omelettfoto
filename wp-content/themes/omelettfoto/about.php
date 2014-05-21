@@ -31,9 +31,8 @@ Template Name: About
 
                         <ul class="contactInfo">
 	                        <?php if (get_field('namn')): ?>
-	                        	<li><strong><?php the_field('namn'); ?></strong></li> <br>
+	                        	<li><b><?php the_field('namn'); ?></b></li>
 	                        <?php endif; ?>
-
 							<?php if (get_field('foretag')): ?>
 	                        	<li><?php the_field('foretag'); ?></li>
 	                        <?php endif; ?>
@@ -46,14 +45,27 @@ Template Name: About
 	                        	<li><?php the_field('post_nummer'); ?></li>
 	                        <?php endif; ?>
 
-	                        <?php if (get_field('post_nummer')): ?>
-	                        	<li><strong>Tele:</strong> <?php the_field('post_nummer'); ?></li>
+	                        <?php if (get_field('telefon')): ?>
+	                        	<li><strong>Telefon:</strong> <?php the_field('telefon'); ?></li>
 	                        <?php endif; ?>
 
 	                        <?php if (get_field('mail')): ?>
-	                        	<li><strong>Mail:</strong> <a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></li>
+	                        	<li><strong>E-post:</strong> <a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a></li>
 	                        <?php endif; ?>
                         </ul>
+
+                        <ul class="social-links contactInfo">
+                            <li><strong>Följ mig på:</strong></li>
+                            <li>
+                                <a class="instagram" target="_blank" href="<?php the_field('instagram_link'); ?>">
+                                    <span class="icon insta"></span>Instagram
+                                </a>
+                                <a class="facebook" target="_blank" href="<?php the_field('facebook_link'); ?>">
+                                    <span class="icon fb"></span>Facebook
+                                </a>
+                            </li>
+                        </ul>
+
                     </article>
                 <?php endwhile; //End the loop ?>
 

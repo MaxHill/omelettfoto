@@ -16,7 +16,7 @@
         <?php endwhile; //End the loop ?>
 
         <div class="commentSection">
-            <?php comments_template(); ?>
+            <?php // comments_template(); ?>
         </div>
     </div>
 </section>  
