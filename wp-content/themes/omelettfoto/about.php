@@ -57,12 +57,17 @@ Template Name: About
                         <ul class="social-links contactInfo">
                             <li><strong>Följ mig på:</strong></li>
                             <li>
-                                <a class="instagram" target="_blank" href="<?php the_field('instagram_link'); ?>">
-                                    <span class="icon insta"></span>Instagram
-                                </a>
-                                <a class="facebook" target="_blank" href="<?php the_field('facebook_link'); ?>">
-                                    <span class="icon fb"></span>Facebook
-                                </a>
+                                <?php if (get_field('instagram_link')): ?>
+                                    <a class="instagram" target="_blank" href="<?php the_field('instagram_link'); ?>">
+                                        <span class="icon insta"></span>
+                                    </a>
+                                <?php endif; ?>
+
+                                <?php if (get_field('facebook_link')): ?>
+                                    <a class="facebook" target="_blank" href="<?php the_field('facebook_link'); ?>">
+                                        <span class="icon fb"></span>
+                                    </a>
+                                <?php endif; ?>
                             </li>
                         </ul>
 

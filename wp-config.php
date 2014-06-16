@@ -1,10 +1,10 @@
 <?php
 
-if (strpos($_SERVER['SERVER_NAME'],'localhost') !== false) {
+if (strpos($_SERVER['SERVER_NAME'],'local') !== false) {
 
 //flera dom�ner
-define( 'WP_SITEURL','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto' );
-define( 'WP_HOME','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto' );
+define( 'WP_SITEURL','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto-wp' );
+define( 'WP_HOME','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto-wp' );
 //slut flera dom�ner
 
 
@@ -30,6 +30,7 @@ define( 'WP_HOME','http://'.$_SERVER['SERVER_NAME'].'/omelettfoto' );
  *
  * @package WordPress
  */
+
 
 // ** MySQL-inst�llningar - MySQL-uppgifter f�r du fr�n ditt webbhotell ** //
 /** Namnet p� databasen du vill anv�nda f�r WordPress */
